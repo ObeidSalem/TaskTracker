@@ -22,7 +22,9 @@ export class TasksComponent {
     this.taskService.deleteTask(task).subscribe((): void => {
       this.tasks = this.tasks.filter((task) => task.id !== task.id);
     });
-    window.location.reload()
+    setTimeout(() => {
+      window.location.reload();
+    }, 500); // Adjust the timeout value as needed
   }
 
   toggleReminder(task: Task): void {
@@ -33,7 +35,9 @@ export class TasksComponent {
 
   addTask(task: Task): void {
     this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
-    window.location.reload()
+    setTimeout(() => {
+      window.location.reload();
+    }, 500); // Adjust the timeout value as needed
   }
 }
 
