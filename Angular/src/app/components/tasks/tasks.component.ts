@@ -24,20 +24,18 @@ export class TasksComponent {
     });
     setTimeout(() => {
       window.location.reload();
-    }, 1000); // Adjust the timeout value as needed
+    }, 1000);
   }
 
   toggleReminder(task: Task): void {
     task.reminder = !task.reminder;
     this.taskService.updateTaskReminder(task).subscribe();
-
   }
 
   addTask(task: Task): void {
-    this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
+    this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
     setTimeout(() => {
       window.location.reload();
-    }, 800); // Adjust the timeout value as needed
+    }, 800);
   }
 }
-

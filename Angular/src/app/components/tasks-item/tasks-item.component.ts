@@ -4,10 +4,10 @@ import { Task } from '../../Task';
 @Component({
   selector: 'app-tasks-item',
   templateUrl: './tasks-item.component.html',
-  styleUrls: ['./tasks-item.component.css']
+  styleUrls: ['./tasks-item.component.css'],
 })
 export class TasksItemComponent {
-  @Input() task!: Task
+  @Input() task!: Task;
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
 
