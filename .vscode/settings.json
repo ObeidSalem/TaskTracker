@@ -1,4 +1,7 @@
 {
     "search.useGlobalIgnoreFiles": true,
-    "search.useParentIgnoreFiles": true
+    "search.useParentIgnoreFiles": true,
+    "cSpell.words": [
+        "hstore"
+    ]
 }

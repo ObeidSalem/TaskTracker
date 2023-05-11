@@ -24,7 +24,7 @@ export class TasksComponent {
     });
     setTimeout(() => {
       window.location.reload();
-    }, 500); // Adjust the timeout value as needed
+    }, 1000); // Adjust the timeout value as needed
   }
 
   toggleReminder(task: Task): void {
@@ -37,7 +37,7 @@ export class TasksComponent {
     this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
     setTimeout(() => {
       window.location.reload();
-    }, 500); // Adjust the timeout value as needed
+    }, 800); // Adjust the timeout value as needed
   }
 }
 
